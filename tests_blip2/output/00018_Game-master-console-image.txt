@@ -1,0 +1,28 @@
+========================================
+Model: blip2_opt - pretrain_opt2.7b
+Caption: ['a game boy with the word game master on it']
+
+========================================
+Model: blip2_opt - caption_coco_opt2.7b
+Caption: ['an old game boy with the word game master on it']
+
+========================================
+Model: blip2_opt - pretrain_opt6.7b
+Caption: ['a nintendo game boy']
+
+========================================
+Model: blip2_opt - caption_coco_opt6.7b
+Caption: ['a game boy is sitting on a table']
+
+========================================
+Model: blip2_t5 - pretrain_flant5xl
+Caption: ['a game boy with the word game master on it']
+
+========================================
+Model: blip2_t5 - caption_coco_flant5xl
+Caption: ['a game boy with the words game master on it']
+
+========================================
+Model: blip2_t5 - pretrain_flant5xxl
+Caption: ['a nintendo game boy']
+

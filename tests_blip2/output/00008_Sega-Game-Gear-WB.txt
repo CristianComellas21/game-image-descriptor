@@ -1,0 +1,28 @@
+========================================
+Model: blip2_opt - pretrain_opt2.7b
+Caption: ['the nintendo game boy']
+
+========================================
+Model: blip2_opt - caption_coco_opt2.7b
+Caption: ['a nintendo game boy sitting on top of a black surface']
+
+========================================
+Model: blip2_opt - pretrain_opt6.7b
+Caption: ['a black game boy']
+
+========================================
+Model: blip2_opt - caption_coco_opt6.7b
+Caption: ['a black and white image of a video game console']
+
+========================================
+Model: blip2_t5 - pretrain_flant5xl
+Caption: ['the nintendo game boy']
+
+========================================
+Model: blip2_t5 - caption_coco_flant5xl
+Caption: ['a nintendo game console with a screen on it']
+
+========================================
+Model: blip2_t5 - pretrain_flant5xxl
+Caption: ['the sega game boy']
+

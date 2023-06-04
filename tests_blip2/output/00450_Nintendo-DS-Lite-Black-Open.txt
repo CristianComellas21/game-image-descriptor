@@ -1,0 +1,28 @@
+========================================
+Model: blip2_opt - pretrain_opt2.7b
+Caption: ['a black nintendo ds']
+
+========================================
+Model: blip2_opt - caption_coco_opt2.7b
+Caption: ['a black nintendo ds sitting on top of a white surface']
+
+========================================
+Model: blip2_opt - pretrain_opt6.7b
+Caption: ['a black nintendo ds']
+
+========================================
+Model: blip2_opt - caption_coco_opt6.7b
+Caption: ['a black nintendo ds lite on a white background']
+
+========================================
+Model: blip2_t5 - pretrain_flant5xl
+Caption: ['a black nintendo ds']
+
+========================================
+Model: blip2_t5 - caption_coco_flant5xl
+Caption: ['a black nintendo ds game console on a white background']
+
+========================================
+Model: blip2_t5 - pretrain_flant5xxl
+Caption: ['a black nintendo 3ds']
+
