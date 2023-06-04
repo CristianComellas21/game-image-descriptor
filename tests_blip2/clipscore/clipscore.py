@@ -215,8 +215,8 @@ def main():
                    if path.endswith(('.png', '.jpg', '.jpeg', '.tiff'))]
     image_ids = [pathlib.Path(path).stem for path in image_paths]
 
-    output_name_all_caps = 'scores_all_caps_' + args.candidates_json.split('/')[-1].replace('json', 'txt')
-    output_name_scores = 'scores_' + args.candidates_json.split('/')[-1].replace('json', 'txt')
+    output_name_all_caps = 'scores_all_caps_' + args.candidates_json.split('/')[-1].replace('json', 'csv')
+    output_name_scores = 'scores_' + args.candidates_json.split('/')[-1].replace('json', 'csv')
     print('Writing outputs to: {}'.format(output_name_all_caps))
 
     with open(args.candidates_json) as f:
