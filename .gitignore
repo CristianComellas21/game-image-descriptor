@@ -3,3 +3,4 @@ data/images
 data/base_images
 output/caption_game/20230603181_coco_game_finetuned/checkpoint_best.pth
 git_token.txt
+clipscore
