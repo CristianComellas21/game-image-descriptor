@@ -22,7 +22,7 @@ endpoints = {
 
 HEADERS = {
   'Authorization': f'Bearer {ACCESS_TOKEN}',
-'User-Agent': f'{USER_AGENT_NAME} ({USER_AGENT_EMAIL})'
+  'User-Agent': f'{USER_AGENT_NAME} ({USER_AGENT_EMAIL})'
 }
 
 DEFAULT_LANGUAGE = 'en'
