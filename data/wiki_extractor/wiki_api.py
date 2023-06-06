@@ -1,4 +1,3 @@
-
 import requests
 from dotenv import load_dotenv
 import os
@@ -28,16 +27,6 @@ HEADERS = {
 
 DEFAULT_LANGUAGE = 'en'
 
-# def authenticate():
-#     """Authenticate with the Wikimedia Commons API"""
-#     url = 'https://meta.wikimedia.org/w/rest.php/oauth2/access_token'
-#     parameters = {
-#         'grant_type': 'client_credentials',
-#         'client_id': CLIENT_ID,
-#         'client_secret': CLIENT_SECRET
-#     }
-#     response = requests.post(url, json=parameters)
-#     return response.json()
 
 def get_resource_info(filename, project='commons'):
     """Get information about a resource from the Wikimedia Commons API"""
@@ -46,6 +35,7 @@ def get_resource_info(filename, project='commons'):
 
     info_resource = requests.get(url, headers=HEADERS)
     return info_resource.json()
+
 
 def download_resource(filename, *, resource_info=None, name=None, project='commons', destination_path='.'):
     """Download a resource from the Wikimedia Commons API"""
@@ -71,6 +61,7 @@ def download_resource(filename, *, resource_info=None, name=None, project='commo
 
 
 def get_resource_description(url):
+    """Get the description of a resource from the Wikimedia Commons using BeautifulSoup and the url of the description page"""
 
     # get page from url and parse it
     page = requests.get(url)
