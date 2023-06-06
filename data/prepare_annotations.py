@@ -42,6 +42,7 @@ def main():
 
     # Load descriptions and build annotations
     n_elements = len(images)
+    random.seed(21)
     with open('descriptions.txt', 'r') as f:
         descriptions: List[str] = f.read().split('\n-\n')[:-1]
 
@@ -50,11 +51,17 @@ def main():
 
             progress.set_description(f"Processing image {idx+1:05}/{n_elements}...")
 
+            # mid_point = len(description) // 2
+            # random_split_point = random.randint(1, mid_point)
+
+
             # Build annotations
             data[modes[idx]].append({
                 'image': str(image),
                 'image_id': f"{idx:05}",
-                'caption': description
+                'caption': description,
+                # 'text_input': description[:random_split_point],
+                # 'text_output': description[random_split_point:]
                 }
                 )
 

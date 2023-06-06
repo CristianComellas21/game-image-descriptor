@@ -1,0 +1,126 @@
+{
+    "run": {
+        "task": "captioning_game",
+        "lr_sched": "linear_warmup_cosine_lr",
+        "init_lr": 1e-05,
+        "min_lr": 0,
+        "warmup_lr": 1e-08,
+        "warmup_steps": 1000,
+        "weight_decay": 0.05,
+        "max_epoch": 5,
+        "batch_size_train": 16,
+        "batch_size_eval": 8,
+        "num_workers": 4,
+        "accum_grad_iters": 1,
+        "max_len": 30,
+        "min_len": 8,
+        "num_beams": 5,
+        "seed": 42,
+        "output_dir": "/home/cristiancomellas/work/blip/output/caption_game",
+        "amp": true,
+        "resume_ckpt_path": null,
+        "evaluate": false,
+        "train_splits": [
+            "train"
+        ],
+        "valid_splits": [
+            "val"
+        ],
+        "test_splits": [
+            "test"
+        ],
+        "device": "cuda",
+        "world_size": 1,
+        "dist_url": "env://",
+        "distributed": false
+    },
+    "model": {
+        "arch": "blip2_t5",
+        "load_finetuned": false,
+        "pretrained": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_flant5xl.pth",
+        "finetuned": "",
+        "image_size": 224,
+        "drop_path_rate": 0,
+        "use_grad_checkpoint": true,
+        "vit_precision": "fp32",
+        "freeze_vit": false,
+        "num_query_token": 32,
+        "t5_model": "google/flan-t5-xl",
+        "prompt": "",
+        "model_type": "pretrain_flant5xl"
+    },
+    "preprocess": {
+        "vis_processor": {
+            "train": {
+                "name": "blip_image_train",
+                "image_size": 224
+            },
+            "eval": {
+                "name": "blip_image_eval",
+                "image_size": 224
+            }
+        },
+        "text_processor": {
+            "train": {
+                "name": "blip_caption"
+            },
+            "eval": {
+                "name": "blip_caption"
+            }
+        }
+    },
+    "datasets": {
+        "game_caption_flan": {
+            "dataset_card": "dataset_card/game_caption.md",
+            "data_type": "images",
+            "build_info": {
+                "annotations": {
+                    "train": {
+                        "url": "/home/cristiancomellas/work/blip/data/annotations/train.json",
+                        "storage": "/home/cristiancomellas/work/blip/.cache/game/train.json"
+                    },
+                    "val": {
+                        "url": "/home/cristiancomellas/work/blip/data/annotations/val.json",
+                        "storage": "/home/cristiancomellas/work/blip/.cache/game/val.json"
+                    },
+                    "test": {
+                        "url": "/home/cristiancomellas/work/blip/data/annotations/test.json",
+                        "storage": "/home/cristiancomellas/work/blip/.cache/game/test.json"
+                    }
+                },
+                "images": {
+                    "storage": "/home/cristiancomellas/work/blip/.cache/game/"
+                }
+            },
+            "vis_processor": {
+                "train": {
+                    "name": "blip2_image_train",
+                    "image_size": 224
+                },
+                "eval": {
+                    "name": "blip_image_eval",
+                    "image_size": 224
+                }
+            },
+            "text_processor": {
+                "train": {
+                    "name": "blip_caption",
+                    "prompt": "a photo of "
+                },
+                "eval": {
+                    "name": "blip_caption"
+                }
+            }
+        }
+    }
+}
+{"train_lr": "0.000", "train_loss": "3.664"}
+{"val_agg_metrics": 0.0, "val_best_epoch": 0}
+{"train_lr": "0.000", "train_loss": "2.395"}
+{"val_agg_metrics": 0.0, "val_best_epoch": 1}
+{"train_lr": "0.000", "train_loss": "1.880"}
+{"val_agg_metrics": 0.0, "val_best_epoch": 2}
+{"train_lr": "0.000", "train_loss": "1.792"}
+{"val_agg_metrics": 0.0, "val_best_epoch": 3}
+{"train_lr": "0.000", "train_loss": "1.733"}
+{"val_agg_metrics": 0.0, "val_best_epoch": 4}

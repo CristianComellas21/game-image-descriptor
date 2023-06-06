@@ -4,3 +4,5 @@ data/base_images
 output/caption_game/20230603181_coco_game_finetuned/checkpoint_best.pth
 git_token.txt
 tests_blip2/output/images
+tests_blip2/output_base_model_comparison
+*checkpoint_best.pth

@@ -3,7 +3,7 @@ from PIL import Image
 from pathlib import Path
 import numpy as np
 
-def black_background_thumbnail(path_to_image, thumbnail_size=(364,364)):
+def black_background_thumbnail(path_to_image, thumbnail_size=(224,224)):
     background = Image.new('RGB', thumbnail_size, "black")    
     source_image = Image.open(path_to_image).convert("RGB")
     source_image.thumbnail(thumbnail_size)
