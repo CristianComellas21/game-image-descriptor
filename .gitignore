@@ -6,3 +6,4 @@ git_token.txt
 tests_blip2/output/images
 tests_blip2/output_base_model_comparison
 *checkpoint_best.pth
+.env
