@@ -75,15 +75,5 @@ def main():
     json.dump(data['val'], open(annotations_path / Path('val.json'), 'w'), ensure_ascii=False)
     json.dump(data['test'], open(annotations_path / Path('test.json'), 'w'), ensure_ascii=False)
 
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     main()
