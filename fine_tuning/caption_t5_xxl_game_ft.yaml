@@ -8,7 +8,7 @@ model:
   model_type: pretrain_flant5xxl
   load_finetuned: False
   use_grad_checkpoint: True
-  freeze_vit: False
+  freeze_vit: True
   vit_precision: fp32
 
 datasets:

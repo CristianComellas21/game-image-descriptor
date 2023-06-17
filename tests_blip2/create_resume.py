@@ -51,10 +51,15 @@ names = {
     "blip2_opt_pretrain_opt6.7b": "OPT 6.7b",
     "blip2_t5_caption_coco_flant5xl": "T5 COCO XL",
     "blip2_t5_pretrain_flant5xl": "T5 XL",
-    "blip2_t5_pretrain_flant5xxl": "T5 XXL"
-    # "blip2_opt_coco_game_finetuned": "OPT 6.7b + FT",
-
-
+    "blip2_t5_pretrain_flant5xxl": "T5 XXL",
+    # FINETUNED ----------------------------------
+    "blip2_opt_6_game_finetuned": "OPT 6.7b+FT",
+    "blip2_opt_2_game_finetuned": "OPT 2.7b+FT",
+    "blip2_coco_opt_2_game_finetuned_loadft": "OPT COCO 2.7b+FT",
+    "blip2_coco_opt_6_game_finetuned_loadft": "OPT COCO 6.7b+FT",
+    "blip2_t5_xl_game_finetuned": "T5 XL+FT",
+    "blip2_t5_xxl_game_finetuned_freezed": "T5 XXL+FT+FR",
+    "blip2_coco_t5_xl_game_finetuned_loadft": "T5 COCO XL+FT",
 }
 
 new_df = df.copy()

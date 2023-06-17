@@ -42,10 +42,12 @@ def process_image(raw_image, vis_processors):
 # %%
 # Define images to test on
 
-# load test annotations and select 10 random samples
-tests = json.load(open("../data/annotations/test.json"))
-# selected_samples = np.random.default_rng(seed=21).choice(tests, size=10, replace=False)
-selected_samples = tests
+partition = "test"
+
+# load annotations
+samples = json.load(open(f"../data/annotations/{partition}.json"))
+# selected_samples = np.random.default_rng(seed=21).choice(samples, size=10, replace=False)
+selected_samples = samples
 
 # Save caption references
 with open(OUTPUT_CAPTIONS_ROOT / "references.json", "w") as f:
@@ -84,17 +86,47 @@ models_info: List[dict] = [
     # Fine-tuned models
     {
         "name": "blip2_opt",
-        "model_type": "caption_coco_opt2.7b",
-        "checkpoint_path": "../output/caption_game/20230603181_coco_opt_2_game_finetuned/checkpoint_best.pth",
-        "save_name": "blip2_opt_coco_game_finetuned"
-    },
-    {
-        "name": "blip2_opt",
         "model_type": "pretrain_opt6.7b",
         "checkpoint_path": "../output/caption_game/20230604185_opt_6_game_finetuned/checkpoint_best.pth",
         "save_name": "blip2_opt_6_game_finetuned"
     },
-    # Not fine-tuned models
+    # {
+    #     "name": "blip2_opt",
+    #     "model_type": "pretrain_opt2.7b",
+    #     "checkpoint_path": "../output/caption_game/20230604200_opt_2_game_finetuned/checkpoint_best.pth",
+    #     "save_name": "blip2_opt_2_game_finetuned"
+    # },
+    # {
+    #     "name": "blip2_opt",
+    #     "model_type": "caption_coco_opt2.7b",
+    #     "checkpoint_path": "../output/caption_game/20230611122_coco_opt_2_game_finetuned_loadft/checkpoint_best.pth",
+    #     "save_name": "blip2_coco_opt_2_game_finetuned_loadft"
+    # },
+    # {
+    #     "name": "blip2_opt",
+    #     "model_type": "caption_coco_opt6.7b",
+    #     "checkpoint_path": "../output/caption_game/20230611125_coco_opt_6_game_finetuned_loadft/checkpoint_best.pth",
+    #     "save_name": "blip2_coco_opt_6_game_finetuned_loadft"
+    # },
+    # {
+    #     "name": "blip2_t5",
+    #     "model_type": "pretrain_flant5xl",
+    #     "checkpoint_path": "../output/caption_game/20230605195_t5_xl_game_finetuned/checkpoint_best.pth",
+    #     "save_name": "blip2_t5_xl_game_finetuned"
+    # },
+    # {
+    #     "name": "blip2_t5",
+    #     "model_type": "pretrain_flant5xxl",
+    #     "checkpoint_path": "../output/caption_game/20230611120_t5_xxl_game_finetuned_freezed/checkpoint_best.pth",
+    #     "save_name": "blip2_t5_xxl_game_finetuned_freezed"
+    # },
+    # {
+    #     "name": "blip2_t5",
+    #     "model_type": "caption_coco_flant5xl",
+    #     "checkpoint_path": "../output/caption_game/20230611133_coco_t5_xl_game_finetuned_loadft/checkpoint_best.pth",
+    #     "save_name": "blip2_coco_t5_xl_game_finetuned_loadft"
+    # },
+    # # Not fine-tuned models -------------------------------------------------
     # {
     #     "name": "blip2_opt",
     #     "model_type": "pretrain_opt2.7b"
